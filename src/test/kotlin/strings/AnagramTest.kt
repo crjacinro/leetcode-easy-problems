@@ -24,4 +24,14 @@ class AnagramTest {
 
         assertFalse(result)
     }
+
+    @Test
+    fun is_not_anagram_if_length_is_different() {
+        val s = "a"
+        val t = "ab"
+
+        val result = isAnagram(s, t)
+
+        assertFalse(result)
+    }
 }
