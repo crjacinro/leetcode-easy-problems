@@ -1,6 +1,6 @@
 package arrays
 
-import junit.framework.Assert
+import junit.framework.TestCase.assertTrue
 import org.junit.Test
 
 class PlusOneTest {
@@ -11,7 +11,7 @@ class PlusOneTest {
 
         val result = plusOne(input1)
 
-        Assert.assertTrue(result.contentEquals(expected))
+        assertTrue(result.contentEquals(expected))
     }
 
     @Test
@@ -21,7 +21,7 @@ class PlusOneTest {
 
         val result = plusOne(input1)
 
-        Assert.assertTrue(result.contentEquals(expected))
+        assertTrue(result.contentEquals(expected))
     }
 
     @Test
@@ -31,6 +31,6 @@ class PlusOneTest {
 
         val result = plusOne(input1)
 
-        Assert.assertTrue(result.contentEquals(expected))
+        assertTrue(result.contentEquals(expected))
     }
 }

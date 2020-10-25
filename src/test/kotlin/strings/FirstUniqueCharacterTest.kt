@@ -1,6 +1,6 @@
 package strings
 
-import junit.framework.Assert
+import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
 class FirstUniqueCharacterTest {
@@ -11,7 +11,7 @@ class FirstUniqueCharacterTest {
 
         val result = findFirstUniqueChar(input)
 
-        Assert.assertEquals(expected, result)
+        assertEquals(expected, result)
     }
 
     @Test
@@ -21,6 +21,6 @@ class FirstUniqueCharacterTest {
 
         val result = findFirstUniqueChar(input)
 
-        Assert.assertEquals(expected, result)
+        assertEquals(expected, result)
     }
 }
