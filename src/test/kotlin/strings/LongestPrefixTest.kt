@@ -33,4 +33,24 @@ class LongestPrefixTest {
 
         TestCase.assertEquals(expected, result)
     }
+
+    @Test
+    fun should_handle_2() {
+        val s = arrayOf("car", "cir")
+        val expected = "c"
+
+        val result = longestCommonPrefix(s)
+
+        TestCase.assertEquals(expected, result)
+    }
+
+    @Test
+    fun should_handle_same() {
+        val s = arrayOf("flower", "flower", "flower", "flower")
+        val expected = "flower"
+
+        val result = longestCommonPrefix(s)
+
+        TestCase.assertEquals(expected, result)
+    }
 }
