@@ -3,16 +3,14 @@ package linkedlist
 fun reverseList(head: ListNode?): ListNode? {
     var currentNode = head
     var previousNode: ListNode? = null
-    var nextnode = head?.next
 
-    currentNode?.next = previousNode
-
-    while (nextnode != null) {
-        previousNode = currentNode
-        currentNode = nextnode
-        nextnode = nextnode.next
+    while (currentNode != null) {
+        val nextNode = currentNode.next
 
         currentNode.next = previousNode
+        previousNode = currentNode
+        currentNode = nextNode
     }
-    return currentNode
+
+    return previousNode
 }
