@@ -45,7 +45,7 @@ fun isLeftListAtTheTail(count: Int, current: ListNode?, mid: ListNode?): Boolean
     return if (isSizeEven) {
         // we stop until we are done processing MID
         // special case for count = 2, which current and MID is already equal from the start
-        current?.next != mid?.next || count == 2
+        current != mid?.next || count == 2
     } else {
         // we stop until the current is at the MID
         // special case for count = 2, which current and MID is already equal from the start

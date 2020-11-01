@@ -54,6 +54,23 @@ class PalindromeTest {
     }
 
     @Test
+    fun should_return_false_2() {
+        val node1 = ListNode(1)
+        val node2 = ListNode(1)
+        val node3 = ListNode(2)
+        val node4 = ListNode(1)
+
+        node1.next = node2
+        node2.next = node3
+        node3.next = node4
+        node4.next = null
+
+        val result = isPalindrome(node1)
+
+        Assert.assertFalse(result)
+    }
+
+    @Test
     fun should_return_false_complex_even() {
         val node1 = ListNode(1)
         val node2 = ListNode(2)
