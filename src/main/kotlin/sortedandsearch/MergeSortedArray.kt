@@ -1,6 +1,6 @@
 package sortedandsearch
 
-fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
     val result = mutableListOf<Int>()
 
     var num1Counter = 0
