@@ -1,0 +1,4 @@
+package dynamicprogramming
+
+class MaxSubArray {
+}
