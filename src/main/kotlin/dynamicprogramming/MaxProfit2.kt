@@ -1,5 +1,8 @@
 package dynamicprogramming
 
+// Todo: Find a dynamic programming recursive solution
+
+
 fun maxProfit(prices: IntArray): Int {
     var max = 0
     for (i in prices.indices) {
