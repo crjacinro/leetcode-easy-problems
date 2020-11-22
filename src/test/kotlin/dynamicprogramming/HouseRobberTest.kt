@@ -21,4 +21,13 @@ class HouseRobberTest {
 
         Assert.assertEquals(12, result)
     }
+
+    @Test
+    fun should_return_max_amount_3() {
+        val input = intArrayOf(2, 1, 1, 2)
+
+        val result = rob(input)
+
+        Assert.assertEquals(4, result)
+    }
 }

@@ -1,22 +1,32 @@
 package dynamicprogramming
 
 fun rob(nums: IntArray): Int {
-    if (nums.isEmpty()) return 0
-
-    val startDayOne = alternateSum(nums)
-    val startDayTwo = alternateSum(nums.copyOfRange(1, nums.size))
-
-    return if (startDayOne > startDayTwo) startDayOne else startDayTwo
+   return dp(nums, hashMapOf())
 }
 
-private fun alternateSum(nums: IntArray): Int {
-    var sum = 0
-    var i = 0
-    while (i < nums.size) {
-        sum += nums[i]
-
-        i += 2
+private fun dp(nums: IntArray, mem: HashMap<Int, Int>): Int {
+    if (mem[nums.size] != null) {
+        return mem[nums.size]!!
     }
 
-    return sum
+    if (nums.isEmpty()) {
+        mem[0] = 0
+        return mem[0]!!
+    }
+    if (nums.size == 1) {
+        mem[1] = nums[0]
+        return mem[1]!!
+    }
+    if (nums.size == 2) {
+        mem[2] = Math.max(nums[0], nums[1])
+        return mem[2]!!
+    }
+
+    val robSkipped = dp(nums.copyOfRange(0, nums.size - 2), mem)
+    val last = nums.last()
+    val useSkipped = dp(nums.copyOfRange(0, nums.size - 1), mem)
+
+    mem[nums.size] = Math.max(robSkipped + last, useSkipped)
+
+    return mem[nums.size]!!
 }
