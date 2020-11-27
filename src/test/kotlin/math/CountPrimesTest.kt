@@ -6,7 +6,7 @@ import org.junit.Test
 class CountPrimesTest {
     @Test
     fun should_return_primes() {
-        val input = 499979
+        val input = 10
         val expected = 4
 
         val result = countPrimes(input)
