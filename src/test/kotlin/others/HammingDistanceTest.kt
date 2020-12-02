@@ -3,7 +3,7 @@ package others
 import org.junit.Assert
 import org.junit.Test
 
-class HammingDistance {
+class HammingDistanceTest {
     @Test
     fun should_return_binary() {
         val x = 1
