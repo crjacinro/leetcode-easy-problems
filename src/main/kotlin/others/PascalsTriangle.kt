@@ -3,7 +3,6 @@ package others
 fun generate(numRows: Int): List<List<Int>> {
     if (numRows == 0) return listOf()
     if (numRows == 1) return listOf(listOf(1))
-    if (numRows == 2) return listOf(listOf(1), listOf(1, 1))
 
     val previousRows = generate(numRows - 1).toMutableList()
     val lastRow = previousRows.last()
