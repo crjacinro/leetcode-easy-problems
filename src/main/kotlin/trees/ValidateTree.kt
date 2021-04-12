@@ -6,11 +6,11 @@ fun isValidBST(root: TreeNode?): Boolean {
     return isValid(root)
 }
 
-fun isValid(root: TreeNode?, left: TreeNode? = null, right: TreeNode? = null): Boolean {
+fun isValid(root: TreeNode?, minimumNode: Int? = null, maximumNode: Int? = null): Boolean {
     if (root == null) return true
 
-    if (left != null && root.`val` <= left.`val`) return false
-    if (right != null && root.`val` >= right.`val`) return false
+    if (minimumNode != null && root.`val` <= minimumNode) return false
+    if (maximumNode != null && root.`val` >= maximumNode) return false
 
-    return isValid(root.left, left, root) && isValid(root.right, root, right)
+    return isValid(root.left, minimumNode, root.`val`) && isValid(root.right, root.`val`, maximumNode)
 }
